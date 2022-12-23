@@ -1,0 +1,47 @@
+<!-- myapp/templates/myapp/date_range.html -->
+<form method="post">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" value="Submit">
+</form>
+
+{% if Daily_dates %}
+  <h2>Daily Dates</h2>
+  <ul>
+    {% for date in Daily_dates %}
+      <li>{{ date }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+
+{% if Weekly_dates %}
+  <h2>Weekly Dates</h2>
+  <ul>
+    {% for date in Weekly_dates %}
+      <li>{{ date }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+
+{% if Monthly_dates %}
+  <h2>Monthly Dates</h2>
+  <ul>
+    {% for date in Monthly_dates %}
+      <li>{{ date }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+
+
+{% if Annual_dates %}
+  <h2>Annual Dates</h2>
+  <ul>
+    {% for date in Annual_dates %}
+      <li>{{ date }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
